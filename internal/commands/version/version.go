@@ -17,6 +17,6 @@ func (c *Command) Description() string {
 }
 
 func (c *Command) Run(args []string) error {
-	fmt.Println("devtool v0.1.0")
+	fmt.Println("devkit v0.1.0")
 	return nil
 }
