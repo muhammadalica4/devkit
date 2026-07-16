@@ -1,0 +1,26 @@
+name: Build Go Binary
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "stable"
+
+      - name: Build
+        run: |
+          mkdir -p bin
+          go build -o bin/my-program .
+
+      - name: Verify binary
+        run: ./bin/my-program --version
