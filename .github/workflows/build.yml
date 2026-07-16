@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: |
           mkdir -p bin
-          go build -o bin/my-program .
+          go build -o bin/devkit .
 
       - name: Verify binary
         run: ./bin/my-program --version
