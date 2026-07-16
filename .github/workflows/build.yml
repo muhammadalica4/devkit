@@ -23,4 +23,4 @@ jobs:
           go build -o bin/devkit .
 
       - name: Verify binary
-        run: ./bin/my-program --version
+        run: ./bin/devkit --version
